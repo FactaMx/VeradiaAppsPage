@@ -13,3 +13,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "http://*"
+  to = "https://veradia.org/:splat"
+  status = 301
+  force = true
