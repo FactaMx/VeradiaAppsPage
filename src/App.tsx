@@ -8,7 +8,10 @@ import Nummies from "./pages/Nummies";
 import Astrologics from "./pages/Astrologics";
 import PalmLife from "./pages/PalmLife";
 import AuraMind from "./pages/AuraMind";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -18,15 +21,22 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/nummies" element={<Nummies />} />
-          <Route path="/astrologics" element={<Astrologics />} />
-          <Route path="/palmlife" element={<PalmLife />} />
-          <Route path="/auramind" element={<AuraMind />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="min-h-screen flex flex-col">
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/nummies" element={<Nummies />} />
+              <Route path="/astrologics" element={<Astrologics />} />
+              <Route path="/palmlife" element={<PalmLife />} />
+              <Route path="/auramind" element={<AuraMind />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-service" element={<TermsOfService />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
