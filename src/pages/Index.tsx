@@ -103,15 +103,15 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-flame-red">10M+</div>
+              <div className="text-3xl md:text-4xl font-bold text-flame-red">Soon</div>
               <div className="text-warm-silver">Downloads</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-burnt-orange">4.8★</div>
+              <div className="text-3xl md:text-4xl font-bold text-burnt-orange">Soon</div>
               <div className="text-warm-silver">Rating</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-warm-orange">50+</div>
+              <div className="text-3xl md:text-4xl font-bold text-warm-orange">Soon</div>
               <div className="text-warm-silver">Countries</div>
             </div>
             <div className="space-y-2">
@@ -217,19 +217,33 @@ const Index = () => {
           <p className="text-warm-silver mb-6">
             Connecting the mystical with the digital
           </p>
-          <div className="flex justify-center space-x-6 mb-6">
-            <Link to="#" className="text-warm-silver hover:text-flame-red transition-colors">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
+            <Link 
+              to="/privacy-policy" 
+              className="text-warm-silver hover:text-flame-red transition-colors text-sm md:text-base"
+            >
               Privacy Policy
             </Link>
-            <Link to="#" className="text-warm-silver hover:text-flame-red transition-colors">
+            <span className="text-warm-silver">•</span>
+            <Link 
+              to="/terms-of-service" 
+              className="text-warm-silver hover:text-flame-red transition-colors text-sm md:text-base"
+            >
               Terms of Service
             </Link>
-            <Link to="#" className="text-warm-silver hover:text-flame-red transition-colors">
+            <span className="text-warm-silver">•</span>
+            <a 
+              href="mailto:nummies.app@gmail.com" 
+              className="text-warm-silver hover:text-flame-red transition-colors text-sm md:text-base"
+            >
               Support
-            </Link>
+            </a>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2024 Veradia. All rights reserved.
+            © {new Date().getFullYear()} Veradia. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            Veradia is not a substitute for professional medical, legal, financial, or psychological advice.
           </p>
         </div>
       </footer>

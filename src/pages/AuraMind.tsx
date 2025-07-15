@@ -100,8 +100,36 @@ const AuraMind = () => {
           <div className="text-2xl font-bold bg-gradient-flame bg-clip-text text-transparent mb-4">
             Veradia
           </div>
-          <p className="text-warm-silver">
+          <p className="text-warm-silver mb-6">
             Connecting the mystical with the digital
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-6">
+            <Link 
+              to="/privacy-policy" 
+              className="text-warm-silver hover:text-flame-red transition-colors text-sm md:text-base"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-warm-silver">•</span>
+            <Link 
+              to="/terms-of-service" 
+              className="text-warm-silver hover:text-flame-red transition-colors text-sm md:text-base"
+            >
+              Terms of Service
+            </Link>
+            <span className="text-warm-silver">•</span>
+            <a 
+              href="mailto:nummies.app@gmail.com" 
+              className="text-warm-silver hover:text-flame-red transition-colors text-sm md:text-base"
+            >
+              Support
+            </a>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Veradia. All rights reserved.
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
+            Veradia is not a substitute for professional medical, legal, financial, or psychological advice.
           </p>
         </div>
       </footer>

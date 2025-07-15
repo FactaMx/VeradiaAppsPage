@@ -11,7 +11,6 @@ import AuraMind from "./pages/AuraMind";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
-import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -35,7 +34,6 @@ const App = () => (
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-          <Footer />
         </div>
       </BrowserRouter>
     </TooltipProvider>
